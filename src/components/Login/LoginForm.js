@@ -5,6 +5,7 @@ import { Text,
 				TextInput,
 				TouchableOpacity,
 				StatusBar,
+				KeyboardAvoidingView,
 				} from 'react-native';
 
 export default class LoginForm extends Component {
@@ -17,8 +18,8 @@ export default class LoginForm extends Component {
 				<TextInput
 				placeholder="username or email"
 				placeholderTextColor= "rgba(255,255,255,0.5)"
-				returnKeyType="next"
 				keyboardType="email-address"
+				returnKeyType="next"
 				autoCapitalize='none'
 				autoCorrect={false}
 				onSubmitEditing={() => this.passwordInput.focus()}
@@ -32,7 +33,6 @@ export default class LoginForm extends Component {
 				style={styles.input}
 				ref={(input) => this.passwordInput = input}
 				/>
-
 				<TouchableOpacity style={styles.buttonContainer}>
 					<Text style={styles.buttonText}>LOGIN</Text>
 				</TouchableOpacity>
